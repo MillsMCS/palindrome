@@ -17,6 +17,26 @@ public class PalindromeChecker {
      * @return true if the string is a palindrome, false otherwise
      */
     public static boolean isPalindrome(String s) {
+        if (s.length() == 0) {
+            return true;
+        }
+        removeNonAlphanumeric(s);
+        s.toLowerCase();
+        StringBuilder sb = new StringBuilder();
+        sb.append(s);
+        sb.reverse();
+
+        if (s.equals(sb.toString())) {
+
+            return true;
+        }
         return false;
+    }
+
+    public static String removeNonAlphanumeric(String str) {
+
+        str = str.replaceAll(
+                "[^a-zA-Z0-9]", "");
+        return str;
     }
 }

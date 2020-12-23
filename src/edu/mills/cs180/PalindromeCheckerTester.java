@@ -11,7 +11,7 @@ class PalindromeCheckerTester {
 
     @Test
     void isPalindrome_True_EmptyString() {
-        assertTrue(isPalindrome("racecar"));
+        assertTrue(isPalindrome(""));
     }
 
     @ParameterizedTest
